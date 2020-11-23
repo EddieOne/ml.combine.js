@@ -2,8 +2,8 @@
 
 var fs = require('fs');
 var walk = require('walk');
-var input = './epubtxt';
-var output = 'alltext';
+var input = process.argv[2] || './epubtxt';
+var output = process.argv[3] || 'alltext';
 
 var walker  = walk.walk(input, { followLinks: false });
 var count = 0;
